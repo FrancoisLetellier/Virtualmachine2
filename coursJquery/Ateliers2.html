@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atelier2</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8"/>
+
+    <title>Cours de Jquery</title>
+
+</head>
+
+<body>
+<header>
+    <h1>Cours Jquery</h1>
+</header>
+
+<p id="title">Title<span>Sample</span></p>
+<p id="description"></p>
+
+<button id="animate">Animate</button>
+
+<div>
+    <img id="logo2" src="google.png" width="64">
+</div>
+
+<script
+        src="http://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+        crossorigin="anonymous">
+
+</script>
+
+<script>
+    $(document).ready(function() {
+
+        console.log("jQuery is ready!");
+
+
+
+        var angle = 0;
+        var timer;
+        $('#animate').click(function(){
+            if ($(this).text() == 'Start') {
+                timer = setInterval(function () {
+                    angle = (angle >= 360 ? 0 : angle);
+                    angle += 1;
+                    $('#logo2').css({transform: 'rotate(' + angle + 'deg)'});
+                }, 10);
+                $(this).text('Stop');
+            }else {
+                clearInterval(timer);
+                $(this).text('Start');
+            }
+        });
+
+        });
+
+
+
+
+
+</script>
+
+
+
+
+<foot>
+
+
+
+
+</body>
+</html>
+
+
+
+</body>
+</html>

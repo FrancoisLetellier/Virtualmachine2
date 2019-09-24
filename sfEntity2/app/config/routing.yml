@@ -1,0 +1,5 @@
+francois:
+    resource: "@FrancoisBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

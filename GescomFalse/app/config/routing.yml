@@ -1,0 +1,5 @@
+gescom:
+    resource: "@GescomBundle/Controller/DefaultController.php"
+    type:     annotation
+    prefix:   /
+

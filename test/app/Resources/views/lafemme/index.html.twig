@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Lafemmes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for lafemme in lafemmes %}
+            <tr>
+                <td><a href="{{ path('lafemme_show', { 'id': lafemme.id }) }}">{{ lafemme.id }}</a></td>
+                <td>{{ lafemme.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('lafemme_show', { 'id': lafemme.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('lafemme_edit', { 'id': lafemme.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('lafemme_new') }}">Create a new lafemme</a>
+        </li>
+    </ul>
+{% endblock %}

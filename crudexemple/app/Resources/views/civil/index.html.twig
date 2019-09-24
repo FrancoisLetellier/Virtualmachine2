@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Civils list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for civil in civils %}
+            <tr>
+                <td><a href="{{ path('civil_show', { 'id': civil.id }) }}">{{ civil.id }}</a></td>
+                <td>{{ civil.nom }}</td>
+                <td>{{ civil.prenom }}</td>
+                <td>{{ civil.age }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('civil_show', { 'id': civil.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('civil_edit', { 'id': civil.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('civil_new') }}">Create a new civil</a>
+        </li>
+    </ul>
+{% endblock %}

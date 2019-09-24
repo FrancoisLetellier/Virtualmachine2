@@ -1,0 +1,12 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+
+opi_platform:
+    resource: "@TopiPlatformBundle/Controller/"
+    type:     annotation
+
+
+
+

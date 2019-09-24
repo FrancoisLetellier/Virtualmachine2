@@ -1,0 +1,16 @@
+{
+    "name": "root/untitled",
+    "type": "project",
+    "authors": [
+        {
+            "name": "François LETELLIER",
+            "email": "f.letellier0@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "wcs\\": "src/"
+        }
+    }
+}

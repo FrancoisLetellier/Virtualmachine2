@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ikoene/marvel-api-client": "^0.0.5"
+    }
+}

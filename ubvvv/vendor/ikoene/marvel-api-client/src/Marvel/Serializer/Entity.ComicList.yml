@@ -1,0 +1,7 @@
+ikoene\Marvel\Entity\ComicList:
+    exclusion_policy: ALL
+    properties:
+        items:
+            expose: true
+            serialized_name: items
+            type: ArrayCollection<ikoene\Marvel\Entity\ComicSummary>

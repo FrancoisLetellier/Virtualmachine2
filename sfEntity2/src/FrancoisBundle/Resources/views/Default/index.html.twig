@@ -1,0 +1,6 @@
+{% extends('@Francois/base.html.twig') %}
+
+{% block body %}
+    <p>Hello {{ name }} !</p>
+    <a href="{{ path('byebye', {"name": name}) }}">Bye</a>
+{% endblock %}
